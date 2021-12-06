@@ -2,10 +2,10 @@
 import axios from "axios";
 
 export default async function(req, res) {
+
   if (req.method === "GET") {
     const dataRes = await fetch(`${process.env.API_URL}/resources`);
     const data = await dataRes.json();
-
     return res.send(data);
   }
 
